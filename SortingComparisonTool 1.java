@@ -29,8 +29,3 @@ public class AlgorithmPerformance {
         return steps; // Return total comparisons made
     }
 
-    import java.util.Arrays;
-import java.util.Random;
-
-public class AlgorithmPerformance {
-    
