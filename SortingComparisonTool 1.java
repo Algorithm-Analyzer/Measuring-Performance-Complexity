@@ -10,11 +10,16 @@ public class AlgorithmPerformance {
      */
 
 
-        // Outer loop: we need to do n passes
-        for (int i = 0; i < n; i++) {
-            // Inner loop: compare adjacent numbers
-            for (int j = 0; j < n - i - 1; j++) {
-                steps++; // Count this comparison
+       public static int linearSearch(int[] arr, int target) {
+        // Check each element from start to end
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == target) {
+                return i; // Found at index i
+            }
+        }
+        return -1; // Not found
+    }
+
 
                 // If left number is bigger than right number, swap them
                 if (arr[j] > arr[j + 1]) {
