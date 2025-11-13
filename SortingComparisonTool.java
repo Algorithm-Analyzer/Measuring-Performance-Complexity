@@ -43,11 +43,12 @@ public class AlgorithmPerformance {
             long endTime = System.nanoTime();
             
         
-            // Average time per search
+             // Average time per search
             double timeMs = (endTime - startTime) / 1_000_000.0 / iterations;
             printRow(size, timeMs);
         }
     }
+
     
 
     
