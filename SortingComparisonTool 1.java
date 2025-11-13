@@ -1,6 +1,9 @@
-import java.util.*;
+import java.util.Arrays;
+import java.util.Random;
 
-public class SortingComparisonTool {
+
+public class AlgorithmPerformance {
+
 
     // BUBBLE SORT - Simple but slow
     // Like sorting cards by repeatedly swapping adjacent ones that are in wrong order
