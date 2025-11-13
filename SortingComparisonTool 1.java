@@ -77,3 +77,11 @@ public class AlgorithmPerformance {
     public static void testBinarySearch(int[] sizes, long seed) {
         printHeader("Binary Search");
         for (int size : sizes) {
+
+            // Generate and sort array first
+            int[] arr = generateRandomArray(size, seed);
+            Arrays.sort(arr); // Sort using built-in method
+            
+            // Pick middle element to search for (guaranteed to exist)
+            int target = arr[size / 2];
+            
