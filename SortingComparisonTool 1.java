@@ -58,3 +58,7 @@ public class AlgorithmPerformance {
             if (arr[mid] == target) {
                 return mid; // Found!
             }
+            // If target is greater, ignore left half
+            if (arr[mid] < target) {
+                left = mid + 1;
+            }
