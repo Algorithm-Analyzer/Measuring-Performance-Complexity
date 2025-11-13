@@ -32,6 +32,7 @@ public class AlgorithmPerformance {
              // Pick an element that exists in the array
             int target = arr[size / 2];
             
+            
             // Measure search time (run multiple times for better accuracy)
             int iterations = 1000;
             long startTime = System.nanoTime();
@@ -39,14 +40,6 @@ public class AlgorithmPerformance {
                 linearSearch(arr, target);
             }
 
-            long endTime = System.nanoTime();
-            
-            // Average time per search
-            double timeMs = (endTime - startTime) / 1_000_000.0 / iterations;
-            printRow(size, timeMs);
-        }
-    }
-    
 
 
 
