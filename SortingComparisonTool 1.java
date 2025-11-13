@@ -20,15 +20,13 @@ public class AlgorithmPerformance {
         return -1; // Not found
     }
 
+ /**
+     * Test Linear Search on different array sizes
+     */
+    public static void testLinearSearch(int[] sizes, long seed) {
+        printHeader("Linear Search");
+        for (int size : sizes) {
+            // Generate unsorted array
+            int[] arr = generateRandomArray(size, seed);
 
-                // If left number is bigger than right number, swap them
-                if (arr[j] > arr[j + 1]) {
-                    int temp = arr[j];        // Save left number
-                    arr[j] = arr[j + 1];      // Put right number on left
-                    arr[j + 1] = temp;        // Put saved number on right
-                }
-            }
-        }
-        return steps; // Return total comparisons made
-    }
 
