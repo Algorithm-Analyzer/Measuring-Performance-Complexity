@@ -85,3 +85,10 @@ public class AlgorithmPerformance {
             // Pick middle element to search for (guaranteed to exist)
             int target = arr[size / 2];
             
+            // Measure search time (run multiple times for better accuracy)
+            int iterations = 1000;
+            long startTime = System.nanoTime();
+            for (int i = 0; i < iterations; i++) {
+                binarySearch(arr, target);
+            }
+            long endTime = System.nanoTime();
