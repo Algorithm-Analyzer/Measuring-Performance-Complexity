@@ -67,3 +67,13 @@ public class AlgorithmPerformance {
                 right = mid - 1;
             }
         }
+
+                return -1; // Not found
+    }
+    
+   
+ //Test Binary Search on different array sizes
+
+    public static void testBinarySearch(int[] sizes, long seed) {
+        printHeader("Binary Search");
+        for (int size : sizes) {
