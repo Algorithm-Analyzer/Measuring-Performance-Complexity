@@ -62,3 +62,8 @@ public class AlgorithmPerformance {
             if (arr[mid] < target) {
                 left = mid + 1;
             }
+            // If target is smaller, ignore right half
+            else {
+                right = mid - 1;
+            }
+        }
