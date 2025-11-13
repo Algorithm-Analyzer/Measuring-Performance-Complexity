@@ -29,4 +29,15 @@ public class AlgorithmPerformance {
             // Generate unsorted array
             int[] arr = generateRandomArray(size, seed);
 
+             // Pick an element that exists in the array
+            int target = arr[size / 2];
+            
+            // Measure search time (run multiple times for better accuracy)
+            int iterations = 1000;
+            long startTime = System.nanoTime();
+            for (int i = 0; i < iterations; i++) {
+                linearSearch(arr, target);
+            }
+            long endTime = System.nanoTime();
+
 
