@@ -5,12 +5,10 @@ import java.util.Random;
 public class AlgorithmPerformance {
 
 
-    // BUBBLE SORT - Simple but slow
-    // Like sorting cards by repeatedly swapping adjacent ones that are in wrong order
-    public static int bubbleSort(int[] arr) {
-        int n = arr.length; // Get how many numbers we have
-        int steps = 0; // Count how many comparisons we make
-        
+   * Linear Search: Simple search by checking each element one by one
+     * Time Complexity: O(n) - slower than binary search but works on unsorted arrays
+     */
+
 
         // Outer loop: we need to do n passes
         for (int i = 0; i < n; i++) {
