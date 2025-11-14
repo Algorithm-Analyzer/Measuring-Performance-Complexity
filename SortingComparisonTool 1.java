@@ -193,3 +193,38 @@ public class AlgorithmPerformance {
             printRow(size, timeMs);
         }
     }
+//HELPER METHODS
+public static int[] generateRandomArray(int size, long seed) {
+        Random random = new Random(seed);
+        int[] arr = new int[size];
+        for (int i = 0; i < size; i++) {
+            arr[i] = random.nextInt(10000); // Random numbers 0-9999
+        }
+        return arr;
+    }
+    
+    /**
+     * Create a copy of array to preserve original
+     */
+    public static int[] copyArray(int[] original) {
+        return Arrays.copyOf(original, original.length);
+    }
+    
+    /**
+     * Print table header
+     */
+    public static void printHeader(String algorithmName) {
+        System.out.println("\n" + "=".repeat(40));
+        System.out.println("Algorithm: " + algorithmName);
+        System.out.println("=".repeat(40));
+        System.out.println("Input Size | Time (ms)");
+        System.out.println("-".repeat(40));
+    }
+    
+    /**
+     * Print table row
+     */
+    public static void printRow(int size, double timeMs) {
+        System.out.printf("%-10d | %.2f%n", size, timeMs);
+    }
+
