@@ -98,3 +98,40 @@ public class AlgorithmPerformance {
             printRow(size, timeMs);
         }
     }
+
+    // Bubble Sort:
+    public static void bubbleSort(int[] arr) {
+        int n = arr.length;
+        // Outer loop: passes through the array
+        for (int i = 0; i < n - 1; i++) {
+            // Inner loop: compare adjacent elements
+            for (int j = 0; j < n - i - 1; j++) {
+                // If current element is greater than next, swap them
+                if (arr[j] > arr[j + 1]) {
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+        }
+    }
+    
+    /**
+     * Test Bubble Sort on different array sizes
+     */
+    public static void testBubbleSort(int[] sizes, long seed) {
+        printHeader("Bubble Sort");
+        for (int size : sizes) {
+            // Generate random array
+            int[] arr = generateRandomArray(size, seed);
+            
+            // Measure sorting time
+            long startTime = System.nanoTime();
+            bubbleSort(arr);
+            long endTime = System.nanoTime();
+            
+            // Convert nanoseconds to milliseconds
+            double timeMs = (endTime - startTime) / 1_000_000.0;
+            printRow(size, timeMs);
+        }
+    }
