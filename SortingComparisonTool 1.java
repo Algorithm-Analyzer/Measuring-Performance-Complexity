@@ -228,3 +228,20 @@ public static int[] generateRandomArray(int size, long seed) {
         System.out.printf("%-10d | %.2f%n", size, timeMs);
     }
 
+//MAIN METHOD
+public static void main(String[] args) {
+        // Array sizes to test
+        int[] sizes = {100, 500, 1000};
+        long seed = 12345; // Same seed ensures same random numbers for fair comparison
+        
+        System.out.println("ALGORITHM PERFORMANCE COMPARISON");
+        System.out.println("Comparing Linear Search, Binary Search, Bubble Sort, and Quick Sort");
+        
+        // Run all tests
+        testLinearSearch(sizes, seed);
+        testBinarySearch(sizes, seed);
+        testBubbleSort(sizes, seed);
+        testQuickSort(sizes, seed);
+    }
+}
+
